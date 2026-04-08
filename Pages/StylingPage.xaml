@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.StylingPage"
+             Title="Styling">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Styling Options"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="Dense mode, custom colors, icon sizes, and underline toggle."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Dense Mode -->
+            <Label Text="DENSE MODE" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <flavor:FlavorTextField Label="Normal Height (56dp)"
+                                Placeholder="Default size" />
+
+            <flavor:FlavorTextField Label="Dense Height (40dp)"
+                                Dense="True"
+                                Placeholder="Compact size" />
+
+            <flavor:FlavorTextField Label="Dense Filled"
+                                Dense="True"
+                                Variant="Filled"
+                                Placeholder="Compact filled" />
+
+            <flavor:FlavorTextField Label="Dense Standard"
+                                Dense="True"
+                                Variant="Standard"
+                                Placeholder="Compact standard" />
+
+            <!-- Icon Sizes -->
+            <Label Text="ICON SIZES" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Small Icons (16dp)"
+                                AdornmentIcon="icon_search"
+                                Adornment="Start"
+                                IconSize="Small"
+                                Placeholder="Small" />
+
+            <flavor:FlavorTextField Label="Medium Icons (24dp)"
+                                AdornmentIcon="icon_search"
+                                Adornment="Start"
+                                IconSize="Medium"
+                                Placeholder="Medium (default)" />
+
+            <flavor:FlavorTextField Label="Large Icons (32dp)"
+                                AdornmentIcon="icon_search"
+                                Adornment="Start"
+                                IconSize="Large"
+                                Placeholder="Large" />
+
+            <!-- Underline Toggle -->
+            <Label Text="UNDERLINE TOGGLE" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Standard with Underline"
+                                Variant="Standard"
+                                Underline="True" />
+
+            <flavor:FlavorTextField Label="Standard without Underline"
+                                Variant="Standard"
+                                Underline="False"
+                                HelperText="Underline hidden" />
+
+            <flavor:FlavorTextField Label="Filled with Underline"
+                                Variant="Filled"
+                                Underline="True" />
+
+            <flavor:FlavorTextField Label="Filled without Underline"
+                                Variant="Filled"
+                                Underline="False"
+                                HelperText="Underline hidden" />
+
+            <!-- Custom Accent Colors -->
+            <Label Text="CUSTOM ACCENT COLORS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Default Purple"
+                                Placeholder="Primary (#594AE2)" />
+
+            <flavor:FlavorTextField Label="Pink Accent"
+                                AccentColor="#E91E63"
+                                Placeholder="Focus to see color" />
+
+            <flavor:FlavorTextField Label="Teal Accent"
+                                AccentColor="#009688"
+                                Variant="Filled"
+                                Placeholder="Filled + teal" />
+
+            <flavor:FlavorTextField Label="Orange Accent"
+                                AccentColor="#FF5722"
+                                Variant="Standard"
+                                Placeholder="Standard + orange" />
+
+            <!-- ShrinkLabel + FullWidth -->
+            <Label Text="LAYOUT OPTIONS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Shrink Label"
+                                ShrinkLabel="True"
+                                Placeholder="Label stays floated even when empty" />
+
+            <flavor:FlavorTextField Label="Full Width"
+                                FullWidth="True"
+                                Placeholder="Stretches to fill container" />
+
+            <!-- Dense + Icon combined -->
+            <Label Text="COMBINATIONS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Dense + Small Icon + Filled"
+                                Dense="True"
+                                IconSize="Small"
+                                AdornmentIcon="icon_search"
+                                Adornment="Start"
+                                Variant="Filled"
+                                Placeholder="Compact search" />
+
+            <flavor:FlavorTextField Label="Dense + Clearable"
+                                Dense="True"
+                                IsClearable="True"
+                                Placeholder="Type and clear" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

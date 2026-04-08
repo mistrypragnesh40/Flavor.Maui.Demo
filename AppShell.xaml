@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:Flavor.Maui.Demo.Pages"
+       x:Class="Flavor.Maui.Demo.AppShell"
+       Title="Flavor.Maui Demo">
+
+    <TabBar>
+        <ShellContent Title="Basic" Icon="icon_text.png" ContentTemplate="{DataTemplate pages:BasicPage}" Route="Basic" />
+        <ShellContent Title="Validation" Icon="icon_check.png" ContentTemplate="{DataTemplate pages:ValidationPage}" Route="Validation" />
+        <ShellContent Title="Icons" Icon="icon_person.png" ContentTemplate="{DataTemplate pages:IconsPage}" Route="Icons" />
+        <ShellContent Title="Masks" Icon="icon_mask.png" ContentTemplate="{DataTemplate pages:MasksPage}" Route="Masks" />
+        <ShellContent Title="Styling" Icon="icon_palette.png" ContentTemplate="{DataTemplate pages:StylingPage}" Route="Styling" />
+    </TabBar>
+
+</Shell>

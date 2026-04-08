@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.ValidationPage"
+             Title="Validation">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Form Validation"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="Fill in the form and tap Submit to validate all fields."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Required field -->
+            <flavor:FlavorTextField x:Name="NameField"
+                                Label="Full Name"
+                                IsRequired="True"
+                                RequiredError="Name is required"
+                                Placeholder="John Doe" />
+
+            <!-- Email with custom validation -->
+            <flavor:FlavorTextField x:Name="EmailField"
+                                Label="Email Address"
+                                InputType="Email"
+                                IsRequired="True"
+                                RequiredError="Email is required"
+                                Placeholder="user@example.com" />
+
+            <!-- Phone with regex pattern -->
+            <flavor:FlavorTextField x:Name="PhoneField"
+                                Label="Phone Number"
+                                InputType="Telephone"
+                                Pattern="^\d{10}$"
+                                PatternError="Must be exactly 10 digits"
+                                HelperText="10 digits, no dashes" />
+
+            <!-- Password with validation -->
+            <flavor:FlavorTextField x:Name="PasswordField"
+                                Label="Password"
+                                InputType="Password"
+                                IsRequired="True"
+                                RequiredError="Password is required" />
+
+            <!-- Confirm password -->
+            <flavor:FlavorTextField x:Name="ConfirmPasswordField"
+                                Label="Confirm Password"
+                                InputType="Password"
+                                IsRequired="True" />
+
+            <!-- Zip code — only validate after user types -->
+            <flavor:FlavorTextField x:Name="ZipField"
+                                Label="Zip Code"
+                                Pattern="^\d{5}(-\d{4})?$"
+                                PatternError="Invalid zip (12345 or 12345-6789)"
+                                OnlyValidateIfDirty="True"
+                                HelperText="Won't show error until you type" />
+
+            <!-- Validate on every keystroke -->
+            <flavor:FlavorTextField x:Name="UsernameField"
+                                Label="Username"
+                                ValidationMode="OnChange"
+                                HelperText="Validates as you type (min 3 chars)"
+                                Immediate="True" />
+
+            <!-- Debounced validation -->
+            <flavor:FlavorTextField x:Name="WebsiteField"
+                                Label="Website"
+                                InputType="Url"
+                                DebounceInterval="500"
+                                HelperText="Validates 500ms after you stop typing" />
+
+            <!-- Submit Button -->
+            <Button x:Name="SubmitButton"
+                    Text="Submit"
+                    Clicked="OnSubmitClicked"
+                    BackgroundColor="#594AE2"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HeightRequest="48"
+                    CornerRadius="4"
+                    Margin="0,8,0,0" />
+
+            <!-- Result label -->
+            <Label x:Name="ResultLabel"
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   IsVisible="False" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

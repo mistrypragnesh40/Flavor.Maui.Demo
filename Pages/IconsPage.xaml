@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.IconsPage"
+             Title="Icons &amp; Adornments">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Icons &amp; Adornments"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="Adornment icons and text can be placed at start or end."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Start Icon -->
+            <Label Text="START ICONS" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <flavor:FlavorTextField Label="Email"
+                                AdornmentIcon="icon_email"
+                                Adornment="Start"
+                                AdornmentColor="#2196F3"
+                                InputType="Email"
+                                Placeholder="user@example.com" />
+
+            <flavor:FlavorTextField Label="Username"
+                                AdornmentIcon="icon_person"
+                                Adornment="Start"
+                                AdornmentColor="#4CAF50"
+                                Variant="Filled" />
+
+            <!-- End Icon -->
+            <Label Text="END ICONS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Search"
+                                AdornmentIcon="icon_search"
+                                Adornment="End"
+                                AdornmentColor="#E91E63"
+                                Placeholder="Tap the icon..."
+                                AdornmentAriaLabel="Search button" />
+
+            <flavor:FlavorTextField Label="Password"
+                                AdornmentIcon="icon_eye_off"
+                                Adornment="End"
+                                AdornmentColor="#FF9800"
+                                InputType="Password"
+                                AdornmentAriaLabel="Toggle password visibility" />
+
+            <!-- Clearable Fields -->
+            <Label Text="CLEARABLE" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Clearable (Default Icon)"
+                                IsClearable="True"
+                                Placeholder="Type something, then clear it" />
+
+            <flavor:FlavorTextField Label="Clearable (Custom Icon)"
+                                IsClearable="True"
+                                ClearIcon="icon_search"
+                                Placeholder="Custom clear icon" />
+
+            <!-- Text Adornments -->
+            <Label Text="TEXT ADORNMENTS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Price"
+                                AdornmentText="$"
+                                Adornment="Start"
+                                InputType="Numeric"
+                                Placeholder="0.00" />
+
+            <flavor:FlavorTextField Label="Weight"
+                                AdornmentText="kg"
+                                Adornment="End"
+                                InputType="Numeric"
+                                Placeholder="0.0" />
+
+            <flavor:FlavorTextField Label="Email"
+                                AdornmentText="@gmail.com"
+                                Adornment="End"
+                                Placeholder="username" />
+
+            <!-- Icon + Clearable Combined -->
+            <Label Text="COMBINED" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Search with Clear"
+                                AdornmentIcon="icon_search"
+                                Adornment="Start"
+                                IsClearable="True"
+                                Placeholder="Search and clear..." />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

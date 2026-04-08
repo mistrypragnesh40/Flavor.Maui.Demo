@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.MasksPage"
+             Title="Masks &amp; Converters">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Masks &amp; Converters"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="Input masks format text as you type. Converters bind typed values."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Masks -->
+            <Label Text="INPUT MASKS" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <flavor:FlavorTextField x:Name="PhoneField"
+                                Label="Phone Number"
+                                InputType="Telephone"
+                                HelperText="Pattern: (###) ###-####" />
+
+            <flavor:FlavorTextField x:Name="CreditCardField"
+                                Label="Credit Card"
+                                InputType="Numeric"
+                                HelperText="Pattern: ####-####-####-####" />
+
+            <flavor:FlavorTextField x:Name="DateField"
+                                Label="Date"
+                                InputType="Numeric"
+                                HelperText="Pattern: ##/##/####" />
+
+            <flavor:FlavorTextField x:Name="TimeField"
+                                Label="Time"
+                                InputType="Numeric"
+                                HelperText="Pattern: ##:##" />
+
+            <flavor:FlavorTextField x:Name="ZipField"
+                                Label="Zip+4"
+                                InputType="Numeric"
+                                HelperText="Pattern: #####-####" />
+
+            <!-- Converters -->
+            <Label Text="VALUE CONVERTERS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField x:Name="IntField"
+                                Label="Integer Value"
+                                InputType="Numeric"
+                                HelperText="Bound to int via FlavorConverters.Int" />
+
+            <flavor:FlavorTextField x:Name="DoubleField"
+                                Label="Decimal Amount"
+                                InputType="Numeric"
+                                AdornmentText="$"
+                                Adornment="Start"
+                                HelperText="Bound to double via FlavorConverters.Double" />
+
+            <flavor:FlavorTextField x:Name="DecimalField"
+                                Label="Precise Amount"
+                                InputType="Numeric"
+                                AdornmentText="$"
+                                Adornment="Start"
+                                HelperText="Bound to decimal via FlavorConverters.Decimal" />
+
+            <!-- Live value display -->
+            <Frame BackgroundColor="#F5F5F5" Padding="12" CornerRadius="4">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Live Values:" FontAttributes="Bold" FontSize="13" />
+                    <Label x:Name="PhoneValueLabel" FontSize="12" TextColor="Gray" Text="Phone raw: -" />
+                    <Label x:Name="IntValueLabel" FontSize="12" TextColor="Gray" Text="Int value: -" />
+                    <Label x:Name="DoubleValueLabel" FontSize="12" TextColor="Gray" Text="Double value: -" />
+                    <Label x:Name="DecimalValueLabel" FontSize="12" TextColor="Gray" Text="Decimal value: -" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.BasicPage"
+             Title="Basic Text Fields">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Basic Text Fields"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="FlavorTextField supports three Material Design variants."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Outlined (Default) -->
+            <Label Text="OUTLINED" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <flavor:FlavorTextField Label="Full Name"
+                                Placeholder="Enter your name" />
+
+            <flavor:FlavorTextField Label="Email Address"
+                                InputType="Email"
+                                Placeholder="user@example.com" />
+
+            <flavor:FlavorTextField Label="Password"
+                                InputType="Password"
+                                Placeholder="Min 8 characters" />
+
+            <!-- Filled -->
+            <Label Text="FILLED" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Username"
+                                Variant="Filled"
+                                Placeholder="Choose a username" />
+
+            <flavor:FlavorTextField Label="Phone Number"
+                                Variant="Filled"
+                                InputType="Telephone"
+                                Placeholder="+1 (555) 000-0000" />
+
+            <flavor:FlavorTextField Label="Website"
+                                Variant="Filled"
+                                InputType="Url"
+                                Placeholder="https://" />
+
+            <!-- Standard -->
+            <Label Text="STANDARD" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="First Name"
+                                Variant="Standard" />
+
+            <flavor:FlavorTextField Label="Last Name"
+                                Variant="Standard" />
+
+            <flavor:FlavorTextField Label="Company"
+                                Variant="Standard"
+                                HelperText="Optional" />
+
+            <!-- States -->
+            <Label Text="STATES" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Read Only"
+                                Text="Cannot be edited"
+                                IsReadOnly="True" />
+
+            <flavor:FlavorTextField Label="Disabled"
+                                Text="Disabled input"
+                                IsDisabled="True" />
+
+            <flavor:FlavorTextField Label="With Helper Text"
+                                HelperText="This helper text is always visible" />
+
+            <flavor:FlavorTextField Label="Helper On Focus"
+                                HelperText="I only show when focused"
+                                HelperTextOnFocus="True" />
+
+            <!-- Multi-line -->
+            <Label Text="MULTI-LINE" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorTextField Label="Bio"
+                                Lines="3"
+                                Placeholder="Tell us about yourself..."
+                                ShowCounter="True"
+                                MaxLength="200" />
+
+            <flavor:FlavorTextField Label="Notes"
+                                Variant="Filled"
+                                Lines="4"
+                                Placeholder="Additional notes..." />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

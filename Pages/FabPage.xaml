@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.FabPage"
+             Title="FAB">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Floating Action Buttons"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="Circular FABs with icon, and extended FABs with icon + label."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Standard FAB -->
+            <Label Text="STANDARD FAB" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" Color="Primary" />
+                    <flavor:FlavorFab Icon="icon_add" Color="Secondary" />
+                    <flavor:FlavorFab Icon="icon_add" Color="Error" />
+                    <flavor:FlavorFab Icon="icon_add" Color="Success" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Sizes -->
+            <Label Text="SIZES" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" Size="Small" Color="Primary" />
+                    <flavor:FlavorFab Icon="icon_add" Size="Medium" Color="Primary" />
+                    <flavor:FlavorFab Icon="icon_add" Size="Large" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Extended FAB -->
+            <Label Text="EXTENDED FAB (WITH LABEL)" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" Label="Create" Color="Primary" />
+                    <flavor:FlavorFab Icon="icon_send" Label="Send" Color="Secondary" />
+                    <flavor:FlavorFab Icon="icon_person" Label="Profile" Color="Info" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Custom Accent -->
+            <Label Text="CUSTOM ACCENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" AccentColor="#E91E63" />
+                    <flavor:FlavorFab Icon="icon_add" AccentColor="#009688" />
+                    <flavor:FlavorFab Icon="icon_add" Label="Custom" AccentColor="#FF5722" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- EndIcon (Extended FAB with icon on both sides) -->
+            <Label Text="START + END ICON" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" EndIcon="icon_send" Label="Send" Color="Primary" />
+                    <flavor:FlavorFab StartIcon="icon_person" EndIcon="icon_add" Label="Invite" Color="Secondary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Icon Size -->
+            <Label Text="ICON SIZE" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" IconSize="Small" Color="Primary" />
+                    <flavor:FlavorFab Icon="icon_add" IconSize="Medium" Color="Primary" />
+                    <flavor:FlavorFab Icon="icon_add" IconSize="Large" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Icon Color -->
+            <Label Text="ICON COLOR" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16" VerticalOptions="Center">
+                    <flavor:FlavorFab Icon="icon_add" Color="Primary" IconColor="#FFEB3B" />
+                    <flavor:FlavorFab Icon="icon_add" Label="Yellow Icon" Color="Secondary" IconColor="#FFEB3B" />
+                    <flavor:FlavorFab Icon="icon_add" Color="Error" IconColor="#000000" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Disabled -->
+            <Label Text="DISABLED" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="16">
+                    <flavor:FlavorFab Icon="icon_add" Color="Primary" IsDisabled="True" />
+                    <flavor:FlavorFab Icon="icon_add" Label="Disabled" Color="Primary" IsDisabled="True" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Click Event -->
+            <Label Text="CLICK EVENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <HorizontalStackLayout Spacing="16">
+                <flavor:FlavorFab Icon="icon_add" Color="Primary" Clicked="OnFabClicked" />
+                <Label x:Name="FabClickLabel" Text="Tap the FAB" FontSize="13" TextColor="Gray" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

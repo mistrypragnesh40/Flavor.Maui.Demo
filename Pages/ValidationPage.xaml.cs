@@ -54,6 +54,7 @@ public partial class ValidationPage : ContentPage
 
     private async void OnSubmitClicked(object? sender, EventArgs e)
     {
+        // Manually trigger validation on all fields
         var fields = new FlavorTextField[]
         {
             NameField, EmailField, PhoneField,
@@ -64,6 +65,7 @@ public partial class ValidationPage : ContentPage
         bool allValid = true;
         foreach (var field in fields)
         {
+            // Trigger blur validation for each field
             field.OnValidateOnBlur();
             if (field.HasError)
                 allValid = false;

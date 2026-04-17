@@ -1,4 +1,4 @@
-using Flavor.Maui.Extensions;
+﻿using Flavor.Maui.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace Flavor.Maui.Demo;

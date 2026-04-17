@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flavor.Maui.Demo.Pages.HomePage"
+             Title="Flavor.Maui"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#121212}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0" Padding="20,12">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="4" Margin="0,16,0,24">
+                <Label Text="Flavor.Maui"
+                       FontSize="30" FontAttributes="Bold"
+                       TextColor="{AppThemeBinding Light=#1A1A2E, Dark=#E0E0E0}" />
+                <Label Text="Material Design controls for .NET MAUI with native rendering"
+                       FontSize="14"
+                       TextColor="{AppThemeBinding Light=#757575, Dark=#AAAAAA}" />
+            </VerticalStackLayout>
+
+            <!-- INPUT SECTION CARD -->
+            <Border Style="{StaticResource CardStyle}" StrokeShape="RoundRectangle 16"
+                    Margin="0,0,0,16">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnInputTapped" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Padding="20" Spacing="12">
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="Input Controls" FontSize="20" FontAttributes="Bold"
+                                   TextColor="{AppThemeBinding Light=#1A1A2E, Dark=#E0E0E0}" />
+                            <Label Text="TextField, validation, masks, theming"
+                                   FontSize="12"
+                                   TextColor="{AppThemeBinding Light=#757575, Dark=#AAAAAA}" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="1" Text="→" FontSize="24"
+                               TextColor="{AppThemeBinding Light=#594AE2, Dark=#7E6FE8}"
+                               VerticalOptions="Center" />
+                    </Grid>
+
+                    <BoxView HeightRequest="1"
+                             Color="{AppThemeBinding Light=#F0F0F0, Dark=#2A2A3A}" />
+
+                    <!-- Preview chips -->
+                    <FlexLayout Wrap="Wrap" Direction="Row"
+                                JustifyContent="Start" AlignItems="Center">
+                        <Border BackgroundColor="#EDE7F6" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Outlined" FontSize="11" TextColor="#594AE2" />
+                        </Border>
+                        <Border BackgroundColor="#EDE7F6" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Filled" FontSize="11" TextColor="#594AE2" />
+                        </Border>
+                        <Border BackgroundColor="#EDE7F6" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Standard" FontSize="11" TextColor="#594AE2" />
+                        </Border>
+                        <Border BackgroundColor="#FFEBEE" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Validation" FontSize="11" TextColor="#F44336" />
+                        </Border>
+                        <Border BackgroundColor="#E8F5E9" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Masks" FontSize="11" TextColor="#4CAF50" />
+                        </Border>
+                        <Border BackgroundColor="#FFF3E0" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="42 Props" FontSize="11" TextColor="#FF9800" />
+                        </Border>
+                    </FlexLayout>
+
+                    <!-- Feature list -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="·  3 Material Design variants with native rendering"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                        <Label Text="·  Real-time validation with 5 modes"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                        <Label Text="·  Pattern masks (phone, date, custom)"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                        <Label Text="·  Icons, adornments, dense mode, theming"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- BUTTON SECTION CARD -->
+            <Border Style="{StaticResource CardStyle}" StrokeShape="RoundRectangle 16"
+                    Margin="0,0,0,16">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnButtonsTapped" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Padding="20" Spacing="12">
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="Button Controls" FontSize="20" FontAttributes="Bold"
+                                   TextColor="{AppThemeBinding Light=#1A1A2E, Dark=#E0E0E0}" />
+                            <Label Text="Button, icon button, FAB, speed dial"
+                                   FontSize="12"
+                                   TextColor="{AppThemeBinding Light=#757575, Dark=#AAAAAA}" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="1" Text="→" FontSize="24"
+                               TextColor="{AppThemeBinding Light=#FF4081, Dark=#FF79B0}"
+                               VerticalOptions="Center" />
+                    </Grid>
+
+                    <BoxView HeightRequest="1"
+                             Color="{AppThemeBinding Light=#F0F0F0, Dark=#2A2A3A}" />
+
+                    <!-- Preview chips -->
+                    <FlexLayout Wrap="Wrap" Direction="Row"
+                                JustifyContent="Start" AlignItems="Center">
+                        <Border BackgroundColor="#FCE4EC" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Button" FontSize="11" TextColor="#FF4081" />
+                        </Border>
+                        <Border BackgroundColor="#FCE4EC" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Icon Button" FontSize="11" TextColor="#FF4081" />
+                        </Border>
+                        <Border BackgroundColor="#E3F2FD" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="FAB" FontSize="11" TextColor="#2196F3" />
+                        </Border>
+                        <Border BackgroundColor="#E8F5E9" StrokeShape="RoundRectangle 12"
+                                Stroke="Transparent" Padding="10,6" Margin="0,0,8,8">
+                            <Label Text="Speed Dial" FontSize="11" TextColor="#4CAF50" />
+                        </Border>
+                    </FlexLayout>
+
+                    <!-- Feature list -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="·  Filled, outlined, and text button variants"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                        <Label Text="·  12 semantic colors + custom accent"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                        <Label Text="·  Floating action button with auto-overlay"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                        <Label Text="·  Speed dial menu with animated expand"
+                               FontSize="12" TextColor="{AppThemeBinding Light=#616161, Dark=#999999}" />
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- COMING SOON -->
+            <Label Text="COMING SOON" FontSize="11" FontAttributes="Bold"
+                   TextColor="{AppThemeBinding Light=#9E9E9E, Dark=#666666}"
+                   Margin="4,8,0,8" />
+
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10" Margin="0,0,0,32">
+                <Border Grid.Column="0" Style="{StaticResource CardStyle}"
+                        StrokeShape="RoundRectangle 12" Opacity="0.5">
+                    <VerticalStackLayout Spacing="4" Padding="14,12">
+                        <Label Text="Checkbox" FontSize="13" FontAttributes="Bold"
+                               TextColor="{AppThemeBinding Light=#9E9E9E, Dark=#555555}" />
+                        <Label Text="Check, tri-state" FontSize="10"
+                               TextColor="{AppThemeBinding Light=#BDBDBD, Dark=#444444}" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="1" Style="{StaticResource CardStyle}"
+                        StrokeShape="RoundRectangle 12" Opacity="0.5">
+                    <VerticalStackLayout Spacing="4" Padding="14,12">
+                        <Label Text="Switch" FontSize="13" FontAttributes="Bold"
+                               TextColor="{AppThemeBinding Light=#9E9E9E, Dark=#555555}" />
+                        <Label Text="Toggle on/off" FontSize="10"
+                               TextColor="{AppThemeBinding Light=#BDBDBD, Dark=#444444}" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="2" Style="{StaticResource CardStyle}"
+                        StrokeShape="RoundRectangle 12" Opacity="0.5">
+                    <VerticalStackLayout Spacing="4" Padding="14,12">
+                        <Label Text="Select" FontSize="13" FontAttributes="Bold"
+                               TextColor="{AppThemeBinding Light=#9E9E9E, Dark=#555555}" />
+                        <Label Text="Dropdown" FontSize="10"
+                               TextColor="{AppThemeBinding Light=#BDBDBD, Dark=#444444}" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

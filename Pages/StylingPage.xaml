@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             xmlns:enums="clr-namespace:Flavor.Maui.Enums;assembly=Flavor.Maui"
              x:Class="Flavor.Maui.Demo.Pages.StylingPage"
              Title="Styling">
 

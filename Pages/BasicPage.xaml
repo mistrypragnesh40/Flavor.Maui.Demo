@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
              x:Class="Flavor.Maui.Demo.Pages.BasicPage"
-             Title="Basic Text Fields">
+             Title="Text Fields">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="← Home" Clicked="OnHomeTapped" />
+    </ContentPage.ToolbarItems>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="16">

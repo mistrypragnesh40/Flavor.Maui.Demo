@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.ButtonPage"
+             Title="Buttons">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="← Home" Clicked="OnHomeTapped" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Buttons"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="FlavorButton supports three Material Design variants with semantic colors."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Variants -->
+            <Label Text="VARIANTS" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="Filled" Variant="Filled" Color="Primary" />
+                    <flavor:FlavorButton Text="Outlined" Variant="Outlined" Color="Primary" />
+                    <flavor:FlavorButton Text="Text" Variant="Standard" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Colors -->
+            <Label Text="COLORS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="8">
+                    <flavor:FlavorButton Text="Primary" Color="Primary" />
+                    <flavor:FlavorButton Text="Secondary" Color="Secondary" />
+                    <flavor:FlavorButton Text="Info" Color="Info" />
+                    <flavor:FlavorButton Text="Success" Color="Success" />
+                    <flavor:FlavorButton Text="Warning" Color="Warning" />
+                    <flavor:FlavorButton Text="Error" Color="Error" />
+                    <flavor:FlavorButton Text="Dark" Color="Dark" />
+                    <flavor:FlavorButton Text="Surface" Color="Surface" />
+                    <flavor:FlavorButton Text="Default" Color="Default" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Outlined Colors -->
+            <Label Text="OUTLINED COLORS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="8">
+                    <flavor:FlavorButton Text="Primary" Variant="Outlined" Color="Primary" />
+                    <flavor:FlavorButton Text="Secondary" Variant="Outlined" Color="Secondary" />
+                    <flavor:FlavorButton Text="Error" Variant="Outlined" Color="Error" />
+                    <flavor:FlavorButton Text="Success" Variant="Outlined" Color="Success" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Text Colors -->
+            <Label Text="TEXT VARIANT COLORS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="Primary" Variant="Standard" Color="Primary" />
+                    <flavor:FlavorButton Text="Error" Variant="Standard" Color="Error" />
+                    <flavor:FlavorButton Text="Info" Variant="Standard" Color="Info" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Sizes -->
+            <Label Text="SIZES" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <flavor:FlavorButton Text="Small" Size="Small" Color="Primary" />
+                    <flavor:FlavorButton Text="Medium" Size="Medium" Color="Primary" />
+                    <flavor:FlavorButton Text="Large" Size="Large" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Dense -->
+            <Label Text="DENSE" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <flavor:FlavorButton Text="Dense Small" Size="Small" Dense="True" Color="Primary" />
+                    <flavor:FlavorButton Text="Dense Medium" Dense="True" Color="Primary" />
+                    <flavor:FlavorButton Text="Dense Large" Size="Large" Dense="True" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Icons -->
+            <Label Text="WITH ICONS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="Add" StartIcon="icon_add" Color="Primary" />
+                    <flavor:FlavorButton Text="Send" EndIcon="icon_send" Color="Secondary" />
+                    <flavor:FlavorButton Text="Delete" StartIcon="icon_delete" Variant="Outlined" Color="Error" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- States -->
+            <Label Text="STATES" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="Disabled" IsDisabled="True" Color="Primary" />
+                    <flavor:FlavorButton Text="Loading" x:Name="LoadingButton" Color="Primary" />
+                    <flavor:FlavorButton Text="Toggle Loading" Variant="Outlined" Color="Info"
+                                         Clicked="OnToggleLoadingClicked" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Custom Accent Color -->
+            <Label Text="CUSTOM ACCENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="Pink" AccentColor="#E91E63" />
+                    <flavor:FlavorButton Text="Teal" AccentColor="#009688" />
+                    <flavor:FlavorButton Text="Orange" AccentColor="#FF5722" Variant="Outlined" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Corner Radius -->
+            <Label Text="CORNER RADIUS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="Sharp" CornerRadius="0" Color="Primary" />
+                    <flavor:FlavorButton Text="Default" CornerRadius="4" Color="Primary" />
+                    <flavor:FlavorButton Text="Rounded" CornerRadius="20" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Elevation -->
+            <Label Text="ELEVATION" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorButton Text="No Shadow" DropShadow="False" Color="Primary" />
+                    <flavor:FlavorButton Text="Elevation 2" Elevation="2" Color="Primary" />
+                    <flavor:FlavorButton Text="Elevation 8" Elevation="8" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Full Width -->
+            <Label Text="FULL WIDTH" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorButton Text="Full Width Button" FullWidth="True" Color="Primary" />
+            <flavor:FlavorButton Text="Full Width Outlined" FullWidth="True" Variant="Outlined" Color="Secondary" />
+
+            <!-- Click Event -->
+            <Label Text="CLICK EVENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <flavor:FlavorButton Text="Click Me" Color="Primary" Clicked="OnClickMeClicked" />
+            <Label x:Name="ClickCountLabel" Text="Click count: 0" FontSize="13" TextColor="Gray" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

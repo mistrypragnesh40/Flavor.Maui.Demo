@@ -32,14 +32,16 @@
             <!-- End Icon -->
             <Label Text="END ICONS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
 
-            <flavor:FlavorTextField Label="Search"
+            <flavor:FlavorTextField x:Name="SearchField"
+                                Label="Search"
                                 AdornmentIcon="icon_search"
                                 Adornment="End"
                                 AdornmentColor="#E91E63"
                                 Placeholder="Tap the icon..."
                                 AdornmentAriaLabel="Search button" />
 
-            <flavor:FlavorTextField Label="Password"
+            <flavor:FlavorTextField x:Name="PasswordField"
+                                Label="Password"
                                 AdornmentIcon="icon_eye_off"
                                 Adornment="End"
                                 AdornmentColor="#FF9800"

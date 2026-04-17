@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.IconButtonPage"
+             Title="Icon Buttons">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Icon Buttons"
+                   FontSize="24" FontAttributes="Bold" />
+            <Label Text="Compact square buttons with a single centered icon."
+                   FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+            <!-- Variants -->
+            <Label Text="VARIANTS" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Standard" Color="Primary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Primary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Outlined" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Colors -->
+            <Label Text="COLORS (TEXT VARIANT)" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="8">
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Primary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Secondary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Error" />
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Success" />
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Warning" />
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Info" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Filled Colors -->
+            <Label Text="FILLED COLORS" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="8">
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Primary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Secondary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Error" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Success" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Info" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Sizes -->
+            <Label Text="SIZES" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <flavor:FlavorIconButton Icon="icon_person" Size="Small" Color="Primary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Size="Medium" Color="Primary" />
+                    <flavor:FlavorIconButton Icon="icon_person" Size="Large" Color="Primary" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Disabled -->
+            <Label Text="DISABLED" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorIconButton Icon="icon_person" Color="Primary" IsDisabled="True" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" Color="Primary" IsDisabled="True" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Outlined" Color="Primary" IsDisabled="True" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Custom Accent -->
+            <Label Text="CUSTOM ACCENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="12">
+                    <flavor:FlavorIconButton Icon="icon_person" AccentColor="#E91E63" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Filled" AccentColor="#009688" />
+                    <flavor:FlavorIconButton Icon="icon_person" Variant="Outlined" AccentColor="#FF5722" />
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Click Event -->
+            <Label Text="CLICK EVENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" Margin="0,12,0,0" />
+
+            <HorizontalStackLayout Spacing="12">
+                <flavor:FlavorIconButton Icon="icon_add" Color="Primary" Variant="Filled" Clicked="OnIconButtonClicked" />
+                <Label x:Name="IconClickLabel" Text="Tap the icon button" FontSize="13" TextColor="Gray" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

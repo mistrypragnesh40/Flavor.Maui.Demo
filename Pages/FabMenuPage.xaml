@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.Pages.FabMenuPage"
+             Title="FAB Menu">
+
+    <flavor:FlavorFabAnchor Position="BottomEnd" ShowBackdrop="True">
+
+        <flavor:FlavorFabAnchor.Fab>
+            <flavor:FlavorFabMenu Icon="icon_add" CloseIcon="icon_close" Color="Primary" Direction="Top">
+                <flavor:FlavorFabAction Icon="icon_send" Label="Send" Color="Secondary" Clicked="OnSendClicked" />
+                <flavor:FlavorFabAction Icon="icon_person" Label="Contact" Color="Info" Clicked="OnContactClicked" />
+                <flavor:FlavorFabAction Icon="icon_email" Label="Email" Color="Success" Clicked="OnEmailClicked" />
+            </flavor:FlavorFabMenu>
+        </flavor:FlavorFabAnchor.Fab>
+
+        <!-- Page content -->
+        <ScrollView BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+            <VerticalStackLayout Padding="20" Spacing="16" BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+
+                <Label Text="FAB Menu (Speed Dial)"
+                       FontSize="24" FontAttributes="Bold" />
+                <Label Text="Tap the floating action button at the bottom-right to expand the speed dial menu. Actions animate upward with labels."
+                       FontSize="13" TextColor="Gray" Margin="0,0,0,8" />
+
+                <Label x:Name="StatusLabel" Text="Tap an action..." FontSize="15" TextColor="Gray" />
+
+                <BoxView HeightRequest="1" Color="LightGray" Margin="0,8" />
+
+                <Label Text="INLINE FAB MENU" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+                <Label Text="FlavorFabMenu can also be placed inline (not floating):"
+                       FontSize="13" TextColor="Gray" />
+
+                <HorizontalStackLayout Spacing="16" HorizontalOptions="Center" Margin="0,16">
+                    <flavor:FlavorFabMenu Icon="icon_add" Color="Secondary" Direction="Top">
+                        <flavor:FlavorFabAction Icon="icon_lock" Label="Lock" Color="Error" />
+                        <flavor:FlavorFabAction Icon="icon_search" Label="Search" Color="Info" />
+                    </flavor:FlavorFabMenu>
+
+                    <flavor:FlavorFabMenu Icon="icon_add" Color="Error" Direction="Top">
+                        <flavor:FlavorFabAction Icon="icon_person" Color="Primary" />
+                        <flavor:FlavorFabAction Icon="icon_email" Color="Success" />
+                        <flavor:FlavorFabAction Icon="icon_send" Color="Warning" />
+                    </flavor:FlavorFabMenu>
+                </HorizontalStackLayout>
+
+                <BoxView HeightRequest="1" Color="LightGray" Margin="0,8" />
+
+                <Label Text="SCROLL CONTENT" FontSize="12" FontAttributes="Bold" TextColor="Gray" />
+                <Label Text="Scroll to verify the FAB floats above content." FontSize="13" TextColor="Gray" />
+
+                <!-- Filler content for scrolling -->
+                <BoxView HeightRequest="80" Color="#E8EAF6" />
+                <BoxView HeightRequest="80" Color="#C5CAE9" />
+                <BoxView HeightRequest="80" Color="#9FA8DA" />
+                <BoxView HeightRequest="80" Color="#7986CB" />
+                <BoxView HeightRequest="80" Color="#5C6BC0" />
+                <BoxView HeightRequest="80" Color="#3F51B5" />
+                <BoxView HeightRequest="80" Color="#3949AB" />
+                <BoxView HeightRequest="80" Color="#303F9F" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </flavor:FlavorFabAnchor>
+
+</ContentPage>

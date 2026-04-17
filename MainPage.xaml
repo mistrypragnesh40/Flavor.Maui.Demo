@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flavor="clr-namespace:Flavor.Maui.Controls;assembly=Flavor.Maui"
+             x:Class="Flavor.Maui.Demo.MainPage"
+             Title="Flavor.Maui Demo">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <Label Text="Flavor.Maui"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="Material Design Controls for .NET MAUI"
+                   FontSize="14"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <!-- Outlined Variant (Default) -->
+            <Label Text="Outlined Variant" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <flavor:FlavorTextField Label="Full Name"
+                                Placeholder="Enter your name" />
+
+            <flavor:FlavorTextField Label="Email"
+                                InputType="Email"
+                                HelperText="We'll never share your email" />
+
+            <flavor:FlavorTextField Label="Password"
+                                InputType="Password"
+                                IsRequired="True" />
+
+            <!-- Filled Variant -->
+            <Label Text="Filled Variant" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <flavor:FlavorTextField Label="Username"
+                                Variant="Filled"
+                                Placeholder="Choose a username" />
+
+            <flavor:FlavorTextField Label="Phone"
+                                Variant="Filled"
+                                InputType="Telephone"
+                                HelperText="Include country code" />
+
+            <!-- Standard Variant -->
+            <Label Text="Standard (Underline) Variant" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <flavor:FlavorTextField Label="First Name"
+                                Variant="Standard" />
+
+            <flavor:FlavorTextField Label="Last Name"
+                                Variant="Standard" />
+
+            <!-- Features -->
+            <Label Text="Features" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <!-- Clearable -->
+            <flavor:FlavorTextField Label="Search"
+                                IsClearable="True"
+                                Placeholder="Type to search..." />
+
+            <!-- Counter -->
+            <flavor:FlavorTextField Label="Bio"
+                                Lines="3"
+                                ShowCounter="True"
+                                MaxLength="200"
+                                HelperText="Tell us about yourself" />
+
+            <!-- Error State -->
+            <flavor:FlavorTextField Label="Required Field"
+                                HasError="True"
+                                ErrorText="This field is required"
+                                IsRequired="True" />
+
+            <!-- Read Only -->
+            <flavor:FlavorTextField Label="Read Only"
+                                Text="You can't edit this"
+                                IsReadOnly="True" />
+
+            <!-- Disabled -->
+            <flavor:FlavorTextField Label="Disabled Field"
+                                Text="Disabled input"
+                                IsDisabled="True" />
+
+            <!-- Custom Accent Color -->
+            <flavor:FlavorTextField Label="Custom Color"
+                                AccentColor="#FF4081"
+                                HelperText="Using secondary color accent" />
+
+            <!-- Adornment Icons -->
+            <Label Text="Adornment Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <flavor:FlavorTextField x:Name="SearchField"
+                                Label="Search"
+                                AdornmentIcon="icon_search"
+                                Adornment="End"
+                                AdornmentColor="#E91E63"
+                                Placeholder="Search..." />
+
+            <flavor:FlavorTextField Label="Email"
+                                AdornmentIcon="icon_email"
+                                Adornment="Start"
+                                AdornmentColor="#2196F3"
+                                InputType="Email" />
+
+            <flavor:FlavorTextField x:Name="PasswordField"
+                                Label="Password"
+                                AdornmentIcon="icon_eye_off"
+                                Adornment="End"
+                                AdornmentColor="#FF9800"
+                                InputType="Password" />
+
+            <flavor:FlavorTextField Label="Username"
+                                AdornmentIcon="icon_person"
+                                Adornment="Start"
+                                AdornmentColor="#4CAF50"
+                                Variant="Filled" />
+
+            <!-- New Features -->
+            <Label Text="New Features" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <!-- ShrinkLabel -->
+            <flavor:FlavorTextField Label="Always Shrunk"
+                                ShrinkLabel="True"
+                                Placeholder="Label stays floated" />
+
+            <!-- FullWidth -->
+            <flavor:FlavorTextField Label="Full Width"
+                                FullWidth="True"
+                                Placeholder="Stretches to fill" />
+
+            <!-- Validation (set from code-behind) -->
+            <flavor:FlavorTextField x:Name="EmailValidation"
+                                Label="Email (Validated)"
+                                InputType="Email"
+                                HelperText="Validates on blur" />
+
+            <!-- Debounce -->
+            <flavor:FlavorTextField x:Name="DebouncedField"
+                                Label="Debounced Input"
+                                DebounceInterval="500"
+                                HelperText="500ms debounce" />
+
+            <!-- Pattern (regex from XAML, no code-behind needed) -->
+            <flavor:FlavorTextField Label="Phone Number"
+                                Pattern="^\d{10}$"
+                                PatternError="Must be 10 digits"
+                                InputType="Telephone"
+                                HelperText="Regex validated on blur" />
+
+            <!-- OnlyValidateIfDirty -->
+            <flavor:FlavorTextField Label="Zip Code"
+                                IsRequired="True"
+                                Pattern="^\d{5}(-\d{4})?$"
+                                PatternError="Invalid zip code"
+                                OnlyValidateIfDirty="True"
+                                HelperText="No error until you type" />
+
+            <!-- Adornment Text -->
+            <flavor:FlavorTextField Label="Price"
+                                AdornmentText="$"
+                                Adornment="Start"
+                                InputType="Numeric"
+                                HelperText="With prefix adornment" />
+
+            <flavor:FlavorTextField Label="Weight"
+                                AdornmentText="kg"
+                                Adornment="End"
+                                InputType="Numeric"
+                                HelperText="With suffix adornment" />
+
+            <!-- Mask (set from code-behind) -->
+            <flavor:FlavorTextField x:Name="PhoneMasked"
+                                Label="Phone (Masked)"
+                                InputType="Telephone"
+                                HelperText="(###) ###-####" />
+
+            <!-- Value + Converter (set from code-behind) -->
+            <flavor:FlavorTextField x:Name="NumericField"
+                                Label="Amount"
+                                InputType="Numeric"
+                                AdornmentText="$"
+                                Adornment="Start" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

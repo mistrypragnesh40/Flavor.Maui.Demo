@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flavor.Maui.Demo.Pages.MacMainPage"
+             Title="Flavor.Maui">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <ScrollView Orientation="Horizontal" Grid.Row="0"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}">
+            <HorizontalStackLayout Padding="12,8" Spacing="8">
+                <Button x:Name="BtnBasic" Text="Basic" Clicked="OnTabClicked" ClassId="0" />
+                <Button x:Name="BtnValidation" Text="Validation" Clicked="OnTabClicked" ClassId="1" />
+                <Button x:Name="BtnIcons" Text="Icons" Clicked="OnTabClicked" ClassId="2" />
+                <Button x:Name="BtnMasks" Text="Masks" Clicked="OnTabClicked" ClassId="3" />
+                <Button x:Name="BtnStyling" Text="Styling" Clicked="OnTabClicked" ClassId="4" />
+            </HorizontalStackLayout>
+        </ScrollView>
+
+        <ContentView x:Name="PageHost" Grid.Row="1" />
+
+    </Grid>
+
+</ContentPage>
